@@ -10,7 +10,8 @@
 ### Example code
 ```<javascript>
     alert('ok');
-</javascript>```
+</javascript>
+```
 
 ### Credit
 [myemail@gmail.com](https://www.facebook.com/teerungrat)
