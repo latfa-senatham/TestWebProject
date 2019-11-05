@@ -2,6 +2,7 @@
 
 # Javascript Alert App
 ### โปรเจคเว็บแอพฯ จัดทำโดย Latfa
+![muji](https://www.muji.com/uk/1908_BTS/BTS_640x400.jpg)
 ### Features
 * List 1
 - List 2
