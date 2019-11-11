@@ -1,0 +1,37 @@
+<!-- แบบฝึกหัด 
+เขียน Ajax ดึงข้อมูลผู้ใช้จาก API มาแสดงในตาราง-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <title>Ajax-getUsers</title>
+    <script>
+        $.ajax({"url": "https://reqres.in/api/users", "method": "GET"}).done(function(r) {
+            let list = $("#members")
+            for (let index=0; index<r.data.length; index++) {
+                console.log(r.data[index].id)
+                list.append('<tr><td>' + r.data[index].id + '</td><td>'+ r.data[index].email + '</td><td>'+ r.data[index].first_name + '</td><td>' + r.data[index].last_name + '</td><td>' + '<img src= "'+ r.data[index].avatar+'" >' + '</td></tr>')
+            }
+        })
+    </script>
+</head>
+<body>
+    <table id="members" class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>email</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Avatar</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+</html>
